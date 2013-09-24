@@ -56,6 +56,7 @@ public class CassandraMutagenImpl implements CassandraMutagen {
 
 				if (resource.endsWith(".class")) {
 					// Remove the file path
+                                    resource = resource.replace("\\", "/");
 					resource=resource.substring(
 						resource.indexOf(rootResourcePath));
 				}
